@@ -12,7 +12,7 @@ from utils.sorting import sort_employees_by_percentage
 
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(APP_DIR, "database.json")
-HASH_TABLE_SIZE = 20  # change if you want larger table
+HASH_TABLE_SIZE = 100  # change if you want larger table
 
 app = Flask(__name__)
 CORS(app)
@@ -240,3 +240,4 @@ def api_download_pdf(percent):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=7077, debug=True)
+
